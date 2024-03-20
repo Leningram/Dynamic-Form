@@ -1,0 +1,31 @@
+@import '../../assets/variables.scss';
+
+.upload {
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-container {
+    width: 100%;
+    display: flex;
+    position: relative;
+    min-width: 430px;
+  }
+
+  &-button {
+    position: absolute;
+    right: 0;
+  }
+
+  &-input {
+    padding-right: 35%;
+    border-style: dashed;
+    background-color: $FileInputColor;
+
+    &-container {
+      width: 100%;
+    }
+  }
+
+}

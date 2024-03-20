@@ -1,0 +1,44 @@
+@import '../../assets/variables.scss';
+
+.inputs-table {
+  width: 100%;
+  border-collapse: collapse;
+
+  * {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 167%;
+    text-align: center;
+  }
+
+  tr {
+    text-align: start;
+  }
+
+  th,
+  td {
+    height: 40px;
+    border-top: 1px solid rgba($MenuActive, .1);
+    border-bottom: 1px solid rgba($MenuActive, .1);
+    border-left: 1px solid rgba($MenuActive, .1);
+    padding: 10px 20px;
+    text-align: start;
+
+    &:last-of-type {
+      border-right: 1px solid rgba($MenuActive, .1);
+
+    }
+  }
+
+  td {
+    font-weight: 400;
+  }
+
+  .input-cell {
+    padding: 0;
+  }
+
+  .no-border {
+    border: none !important;
+  }
+}

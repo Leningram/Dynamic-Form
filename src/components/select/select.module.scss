@@ -1,0 +1,55 @@
+@import '../../assets/variables.scss';
+
+.select {
+  &-container {
+    position: relative;
+    min-width: 245px;
+    z-index: 9;
+
+    .items {
+      &-list {
+        background-color: $White;
+        position: absolute;
+        list-style: none;
+        padding: 10px 0;
+        box-shadow: $PopoverShadow;
+        border-radius: 10px;
+        max-height: 200px;
+        overflow-y: auto;
+        width: 100%;
+        left: 0;
+      }
+
+      &-elem {
+        padding: 8px 15px;
+        cursor: pointer;
+
+        &-selected {
+          background-color: rgba($MenuActive, .1);
+        }
+
+        &:hover {
+          background-color: rgba($MenuActive, .1);
+        }
+      }
+    }
+
+    .icon {
+      width: 16px;
+      height: 16px;
+      transform: rotate(180deg);
+
+      &-rotated {
+        transform: none;
+      }
+    }
+  }
+
+  &-input {
+    cursor: pointer;
+
+    &-disabled {
+      cursor: default;
+    }
+  }
+}

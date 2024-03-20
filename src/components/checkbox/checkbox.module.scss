@@ -1,0 +1,91 @@
+@import '../../assets/variables.scss';
+
+.checkbox {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: start;
+}
+
+.checkbox input {
+  position: absolute;
+  width: 0;
+  left: 50px;
+  height: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkbox .checkmark {
+  position: relative;
+  display: block;
+  top: 0;
+  left: 0;
+  min-width: 20px;
+  min-height: 20px;
+  background: $White;
+  border-radius: 3px;
+  border: 2px solid $CheckboxBorder;
+  transition: all 0.2s ease;
+}
+
+.checkbox input:checked~.checkmark {
+  background: $StatusBadgeColor;
+  border: none;
+}
+
+.checkbox .checkmark::after {
+  position: absolute;
+  display: block;
+  content: '';
+  left: 50%;
+  top: 40%;
+  width: 4px;
+  height: 8px;
+  border: solid $White;
+  border-width: 0 2px 2px 0;
+  transform: translate(-50%, -50%) rotate(45deg);
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  -moz-transform: translate(-50%, -50%) rotate(45deg);
+  -ms-transform: translate(-50%, -50%) rotate(45deg);
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.checkbox .checkmark::before {
+  position: absolute;
+  display: block;
+  content: '!';
+  color: $CheckboxIconColor;
+  left: 40%;
+  top: 7%;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.checkbox input:checked~.checkmark::after {
+  opacity: 1;
+  transition: all 0.2s ease;
+}
+
+.checkbox-disabled {
+  color: $Grey;
+}
+
+.checkbox-disabled {
+  color: $Grey;
+}
+
+.checkbox-disabled input:checked~.checkmark {
+  background: $Grey;
+  border: none;
+}

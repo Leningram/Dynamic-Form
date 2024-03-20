@@ -1,0 +1,58 @@
+@import '../../assets/variables.scss';
+
+.survey {
+  &-modal {
+    padding: 25px;
+    display: flex;
+    height: 90%;
+  }
+
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    .divider {
+      width: 100%;
+      height: 2px;
+      margin-top: 15px;
+      background-color: rgba($TextDark, .1);
+    }
+  }
+
+  &-title {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 20px;
+  }
+
+  &-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    overflow: hidden;
+
+    .survey-nav-button-container {
+      margin: auto 0 25px;
+      flex: 1;
+
+      &:first-of-type {
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      &:not(:first-of-type) {
+        display: flex;
+        justify-content: flex-start;
+      }
+    }
+
+  }
+
+}

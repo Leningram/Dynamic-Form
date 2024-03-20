@@ -1,0 +1,11 @@
+@import '../../assets/variables.scss';
+
+.card {
+  &-container {
+    display: flex;
+    padding: 4px 6px 8px;
+    border-radius: 10px;
+    background: $White;
+    box-shadow: $CardShadow;
+  }
+}

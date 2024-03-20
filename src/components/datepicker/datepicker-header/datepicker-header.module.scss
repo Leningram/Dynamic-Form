@@ -1,0 +1,138 @@
+@import '../../../assets/variables.scss';
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &-left,&-right {
+    display: flex;
+    align-items: center;
+  }
+  &-left {
+    gap: 3px;
+  }
+
+  &-date {
+    color: $TextDark;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+}
+
+.year {
+  color: $TextDark;
+  text-align: center;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 5px 8px;
+  border-radius: 15px;
+  display: flex;
+  align-content: inherit;
+  justify-content: center;
+  cursor: pointer;
+  scroll-margin-top: 50px;
+
+  &:hover {
+    background: $MenuDisabled;
+    color: $White;
+  }
+
+  &-active {
+    background: $MenuDisabled;
+    color: $White;
+  }
+
+  &-button {
+    height: 12px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 5px;
+  }
+
+  &-icon {
+    width: 12px;
+    height: 12px;
+    margin-left: 5px;
+    transform: rotate(180deg);
+
+    &-open {
+      transform: none;
+    }
+  }
+
+  &-container {
+    position: absolute;
+    z-index: 2;
+    top: 47px;
+    left: 11px;
+    background-color: $White;
+    width: 184px;
+    height: calc(100% - 55px);
+    border-radius: 10px;
+  }
+
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0;
+    row-gap: 0;
+    overflow-y: auto;
+    height: 100%;
+    padding: 20px 0 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &-gradient {
+    position: absolute;
+    width: 100%;
+    height: 72px;
+    pointer-events: none;
+
+    &.gradient-top {
+      top: 0;
+      background: linear-gradient(180deg, white, transparent);
+    }
+
+    &.gradient-bottom {
+      bottom: 0;
+      background: linear-gradient(0deg, white, transparent);
+    }
+  }
+}
+
+.month {
+  &-button {
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+
+    &-prev {
+      transform: rotate(-90deg);
+    }
+
+    &-next {
+      transform: rotate(90deg);
+    }
+  }
+}

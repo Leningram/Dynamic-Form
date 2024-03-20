@@ -1,0 +1,53 @@
+@import './assets/variables.scss';
+@import './components/datepicker/datepicker.module.scss';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: $TextDark;
+  font-family: 'Euclid Circular A';
+
+  &::-webkit-scrollbar {
+    width: 20px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+    border: 16px solid rgba($White, 0);
+    background-clip: padding-box;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+    background: rgba($StatusBadgeBackground, .2);
+    border: 5px solid rgba($White, 0);
+    background-clip: padding-box;
+  }
+}
+
+.ant-form-item-label.ant-form-item-label-wrap {
+  padding: 0;
+}
+
+.ant-form-item {
+  margin-bottom: 10px;
+}
+
+.page-title {
+  margin-bottom: 30px;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  font-family: 'Euclid Circular A';
+  white-space: nowrap;
+
+  @media all and (max-width: 768px) {
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+  }
+}

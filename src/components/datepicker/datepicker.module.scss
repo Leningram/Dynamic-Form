@@ -1,0 +1,101 @@
+@import '../../assets/variables.scss';
+
+.datepicker {
+  &-wrapper {
+    width: 100%;
+    z-index: 9;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+
+    @media all and (max-width: 768px) {
+      font-size: 12px;
+    }
+  }
+
+  &-container {
+    display: flex;
+  }
+
+  &-error {
+    color: $Red;
+    font-size: 8px;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+
+.react-datepicker-wrapper {
+  margin-top: 5px;
+}
+
+.react-datepicker-wrapper {
+  margin-top: 5px;
+}
+
+.react-datepicker__aria-live {
+  display: none;
+}
+
+.react-datepicker__day-names {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0 10px;
+  color: $TextDark;
+  text-align: center;
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  opacity: .5;
+}
+
+.react-datepicker__day-name {
+  flex: 1;
+  width: auto;
+  text-transform: capitalize;
+}
+
+.react-datepicker__week {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  border: 0;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: initial;
+  white-space: nowrap;
+}
+
+.react-datepicker__day {
+  display: flex;
+  flex: 1;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  padding: 5px 5px;
+  justify-content: center;
+  color: $TextDark;
+  text-align: center;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $MenuDisabled;
+    color: $White;
+  }
+}
+
+.react-datepicker__day--outside-month {
+  opacity: .5;
+}
+
+.react-datepicker__day--selected {
+  background-color: $MenuDisabled;
+  color: $White;
+  outline: none;
+}

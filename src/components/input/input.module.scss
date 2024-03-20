@@ -1,0 +1,100 @@
+@import '../../assets/variables.scss';
+
+.input {
+  width: 100%;
+  height: 40px;
+  outline: none;
+  padding: 10px 15px;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba($MenuActive, 0.20);
+
+  &-with {
+    &-value {
+      border: 1px solid $StatusBadgeColor;
+    }
+    
+    &-icon {
+      padding-right: 40px;
+    }
+   
+    &-error {
+      border: 1px solid $Red;
+    }
+  }
+
+  &::placeholder {
+    color: rgba($InputTextColor, 0.30);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px $MenuDisabled;
+    border: 2px solid $StatusBadgeColor;
+  }
+
+  &:disabled {
+    border: 1px solid $ButtonDisabled;
+    color: $ButtonDisabled;
+  }
+
+  &-wrapper {
+    position: relative;
+  }
+
+  &-error {
+    color: $Red;
+    font-size: 8px;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 3px;
+  }
+
+  &-label {
+    text-align: start;
+    margin-bottom: 5px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+    @media all and (max-width: 768px) {
+      font-size: 12px;
+    }
+  }
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+    position: relative;
+    width: 100%;
+
+    .icon-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      pointer-events: none;
+      position: absolute;
+      right: 20px;
+      bottom: 12px;
+    }
+
+    .password-button {
+      outline: none;
+      border: none;
+      background-color: transparent;
+      width: 16px;
+      height: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      position: absolute;
+      right: 14px;
+      bottom: 12px;
+    }
+  }
+}

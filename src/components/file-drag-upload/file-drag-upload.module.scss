@@ -1,0 +1,39 @@
+@import '../../assets/variables.scss';
+
+.upload {
+  &-label {
+    text-align: start;
+    font-size: 13px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 20px;
+    pointer-events: none;
+    @media all and (max-width: 768px) {
+      font-size: 10px;
+      line-height: normal;
+    }
+  }
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+  }
+
+  &-dragging {
+    background-color: rgba($MenuActive, .2);
+  }
+
+  &-button {
+    text-align: left;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: $MenuActive;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    text-decoration-line: underline;
+  }
+}

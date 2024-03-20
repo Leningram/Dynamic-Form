@@ -1,0 +1,60 @@
+@import '../../../assets/variables.scss';
+
+.input {
+  width: 100%;
+  border: 1px solid rgba($MenuActive, 0.20);
+  padding: 10px 35px 10px 15px;
+  outline: none;
+  border-radius: 10px;
+  background: $White;
+  color: $TextDark;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+
+  &-container {
+    width: 100%;
+    position: relative;
+  }
+
+  &-icon {
+    position: absolute;
+    right: 15px;
+    top: 13px;
+    cursor: pointer;
+
+    path {
+      fill: $MenuDisabled;
+    }
+  }
+
+  &-with {
+    &-value {
+      border: 1px solid $StatusBadgeColor;
+    }
+    &-error {
+      border: 1px solid $Red;
+    }
+  }
+
+  &:focus {
+    border: 1px solid $MenuActive;
+  }
+}
+
+.input-with-error + svg {
+  path {
+    fill: $Red;
+  }
+
+  &:focus {
+    border: 1px solid $MenuActive;
+  }
+}
+
+.input-with-error + svg {
+  path {
+    fill: $Red;
+  }
+}

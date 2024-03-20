@@ -1,0 +1,88 @@
+// COLORS
+$White: #fffefe;
+$Grey: #d6d5d5;
+$Red: #FF155B;
+$TextDark: #273154;
+$FileInputColor: #F4F2FF;
+
+//DESIGN
+$MenuActive: #6d97ea;
+$MenuDisabled:#bfd7fc;
+$White: #ffffff;
+$ButtonHover: #88baf7;
+$ButtonPressed: #4d7ec2;
+$ButtonDisabled: #E9E9E9;
+$ButtonSecondaryHover: #6ba5e7;
+$StatusBackground: #E9E5FF;
+
+$BorderColor: #CEC5FD;
+
+$BorderLight: rgba($BorderColor, 0.30);
+
+$CheckboxBorder: rgba($TextDark, 0.10);
+$CheckboxIndeterminate: #DDE8FE;
+$CheckboxIconColor: #75baff;
+$AccountHeaderGradient: linear-gradient(105deg, #98D8FF 0%, #958EFF 41.69%, #9586FF 50.39%, #9888FF 59.59%, #B199FF 100%, #B5A0FF 100%);
+$SliderGradient: linear-gradient(90deg, #BFD0FD 0%, #CEC5FD 48.45%, #82B0F8 100%);
+$InputBackgroundColor:#5bb2ff;
+$InputTextColor: #030229;
+
+$RadioBorderColor: #E9E9E9;
+$RadioSelectedColor: #bfd2fc;
+
+$WorkplaceGradient: linear-gradient(134deg, #3DCEED 6.43%, #7DB3FD 32.36%, #94c2fa 60.87%, #EAAEEA 91.96%);
+
+$MenuInactive: #64667D;
+$StatusBadgeBackground: #C9BFFC;
+$StatusBadgeColor: #6ba9e7;
+$FiltersBorderHover: #CCC2FF;
+$White: #ffffff;
+$Black: #000000;
+$SecondaryButtonHover: #333D63;
+$SecondaryButtonPressed: #030229;
+
+
+$BorderLight: rgba($BorderColor, 0.30);
+
+$CardShadowColor: #64abf2;
+$SliderShadowColor: #0f0839;
+
+$BadgeTextColor: #969696;
+
+$BadgeTextColor: #969696;
+
+$BlueText: #4191DB;
+$PinkText: #D968D9;
+
+
+//SHADOWS
+$CardShadow: 0px 15px 20px 0px rgba($CardShadowColor, 0.10);
+$PopoverShadow:  0px 0px 20px 0px rgba($CardShadowColor, 0.10);
+$FloatButtonShadow: 0px 10px 20px 0px rgba($CardShadowColor, 0.50);
+$SliderControlShadow: drop-shadow(0px 0px 6px rgba($SliderShadowColor, 0.20));
+
+$BackgroundGradient: linear-gradient(195deg, #E4F4FF 10.64%, #E8F7FE 36.32%, #F7EEFF 65.5%, #F2E9FC 89.53%),
+  linear-gradient(118deg, #E4F4FF 0%, #E8F7FE 32.55%, #F7EEFF 69.53%, #F2E9FC 100%);
+
+$MenuInactive: #64667D;
+
+
+$BorderLight: rgba(206, 197, 253, 0.30);
+
+$CheckboxBorder: rgba(39, 49, 84, 0.10);
+$CheckboxIndeterminate: #DDE8FE;
+$CheckboxIconColor: #7E75FF;
+$CheckboxGradient: linear-gradient(105deg, #98D8FF 0%, #8ebfff 41.69%, #86beff 50.39%, #88c7ff 59.59%, #B199FF 100%, #a0b8ff 100%);
+$SliderGradient: linear-gradient(90deg, #BFD0FD 0%, #CEC5FD 48.45%, #82B0F8 100%);
+$InputBackgroundColor:#5baaff;
+$InputTextColor: #030229;
+
+$RadioBorderColor: #E9E9E9;
+$RadioSelectedColor: #C9BFFC;
+//SHADOWS
+$CardShadow: 0px 15px 20px 0px rgba(135, 100, 242, 0.10);
+
+// FONTS
+$BigFontSize: 36px;
+$DefaultFontSize: 16px;
+$SmallFontSize: 12px;
