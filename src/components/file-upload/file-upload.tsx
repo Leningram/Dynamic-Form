@@ -22,7 +22,8 @@ export const FileUploader = ({ id, onChange, error }: FileUploaderProps) => {
     setIsLoading(true);
     filesService
       .uploadFile(formData)
-      .then((result) => {
+      .then((result: any) => {
+        // TODO типизировать
         onChange && onChange(result.data.name);
         setFilename(file.name);
       })

@@ -66,9 +66,7 @@ const Survey = ({ onFinish }: SurveyProps) => {
 
   const onSubmit = () => {
     console.log('form.getValues()', form.getValues());
-    formService.createSurveyForm(form.getValues()).then((response) => {
-      !!response.success && onFinish();
-    });
+    onFinish();
   };
 
   return (
