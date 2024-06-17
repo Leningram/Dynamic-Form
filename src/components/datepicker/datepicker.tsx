@@ -3,9 +3,8 @@ import DatepickerHeader from './datepicker-header/datepicker-header';
 import CalendarContainer from './calendar-container/calendar-container';
 import DatepickerInput from './datepicker-input/datepicker-input';
 import ru from 'date-fns/locale/ru';
-import { FormComponent } from '@/core/interfaces';
+import { FormComponent } from '@/core/interfaces/components-interfaces';
 import styles from './datepicker.module.scss';
-import { Locale } from 'date-fns';
 
 interface DatepickerProps extends FormComponent {
   className?: string;
@@ -13,7 +12,7 @@ interface DatepickerProps extends FormComponent {
   label?: string;
   onChange: (date: Date | null) => void;
 }
-// registerLocale('ru', ru);
+registerLocale('ru', ru);
 
 const Datepicker = ({ className, value, onChange, id, label, error }: DatepickerProps) => {
   return (
@@ -29,11 +28,10 @@ const Datepicker = ({ className, value, onChange, id, label, error }: Datepicker
                 fallbackPlacements: ['bottom'],
                 allowedAutoPlacements: ['bottom'],
               },
-              fn: (state) => state,
             },
           ]}
           id={id}
-          // locale={ru}
+          locale={ru}
           customInput={<DatepickerInput error={error} />}
           dateFormat={'dd.MM.yyyy'}
           selected={value}

@@ -5,23 +5,36 @@ import { Field } from '@/core/interfaces';
 import Button, { ButtonTypes } from '../button/button';
 import styles from './dynamic-form.module.scss';
 
+//TODO типизировать
 const DynamicForm = ({ form, field }: any) => {
   const { t } = useTranslation();
-  const { control } = form;
+  const { control, register } = form;
   const { fields, append } = useFieldArray({ control, name: field.title });
+
   return (
     <div>
       <ul className={styles['dynamic-form-list']}>
         {fields.map((item, index) => {
           return (
             <li className={styles['dynamic-form-item']} key={item.id}>
-              {field.fields.map((item: Field) => (
-                <Controller
-                  render={({ field }) => <Input label={item.label} id={item.slug} {...field} />}
-                  name={`${field.title}.${index}.${item.slug}`}
-                  control={control}
-                />
-              ))}
+              {field.fields.map((item: Field) => {
+                return (
+                  <Controller
+                    key={item.slug}
+                    name={`${field.title}.${index}.${item.slug}`}
+                    control={control}
+                    render={() => {
+                      return (
+                        <Input
+                          label={item.label}
+                          id={`${field.title}.${index}.${item.slug}`}
+                          {...register(`${field.title}.${index}.${item.slug}`)}
+                        />
+                      );
+                    }}
+                  />
+                );
+              })}
             </li>
           );
         })}
