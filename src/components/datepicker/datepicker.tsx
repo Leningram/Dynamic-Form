@@ -3,7 +3,7 @@ import DatepickerHeader from './datepicker-header/datepicker-header';
 import CalendarContainer from './calendar-container/calendar-container';
 import DatepickerInput from './datepicker-input/datepicker-input';
 import ru from 'date-fns/locale/ru';
-import { FormComponent } from '@/core/interfaces/components-interfaces';
+import { FormComponent } from '@/core/interfaces';
 import styles from './datepicker.module.scss';
 
 interface DatepickerProps extends FormComponent {
@@ -14,13 +14,14 @@ interface DatepickerProps extends FormComponent {
 }
 registerLocale('ru', ru);
 
-const Datepicker = ({ className, value, onChange, id, label, error }: DatepickerProps) => {
+const Datepicker = ({ className, value, onChange, label, id, error }: DatepickerProps) => {
   return (
     <div className={styles['datepicker-wrapper']}>
       <label htmlFor={id}>
         {label}
         <DatePicker
           popperPlacement='bottom'
+          enableTabLoop={false}
           popperModifiers={[
             {
               name: 'flip',
