@@ -7,9 +7,10 @@ export const surveyMock: SurveyStep[] = [
     sections: [
       {
         title: 'Клиент',
+        expand: true,
         fields: [
           {
-            label: 'Полное наименование клиента',
+            label: 'First Name',
             type: FieldTypeEnum.Text,
             code: null,
             acceptableFieldValues: [],
@@ -17,11 +18,11 @@ export const surveyMock: SurveyStep[] = [
             required: true,
             condition: null,
             dependent: null,
-            slug: 'client_full_name',
+            slug: 'first_name',
             value: null,
           },
           {
-            label: 'Краткое наименование клиента',
+            label: 'Last Name',
             type: FieldTypeEnum.Text,
             code: null,
             acceptableFieldValues: [],
@@ -29,11 +30,11 @@ export const surveyMock: SurveyStep[] = [
             required: true,
             condition: null,
             dependent: null,
-            slug: 'client_name',
+            slug: 'last_name',
             value: null,
           },
           {
-            label: 'Прежние наименования',
+            label: 'Middle Name',
             type: FieldTypeEnum.Text,
             code: null,
             acceptableFieldValues: [],
@@ -41,19 +42,19 @@ export const surveyMock: SurveyStep[] = [
             required: true,
             condition: null,
             dependent: null,
-            slug: 'client_old_name',
+            slug: 'middle_name',
             value: null,
           },
           {
-            label: 'Дата изменения',
-            type: FieldTypeEnum.Date,
+            label: 'Salutation',
+            type: FieldTypeEnum.Select,
             code: null,
             acceptableFieldValues: [],
             description: null,
             required: true,
             condition: null,
             dependent: null,
-            slug: 'client_change_date',
+            slug: 'salutation',
             value: null,
           },
           {
@@ -69,7 +70,6 @@ export const surveyMock: SurveyStep[] = [
             value: null,
           },
         ],
-        expand: false,
         dependent: null,
       },
       {

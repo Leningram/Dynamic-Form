@@ -1,6 +1,7 @@
 import { Control, FieldErrors, FieldValues, UseFormReturn } from 'react-hook-form';
 import SurveyField from './survey-field';
 import styles from './survey-step.module.scss';
+import DynamicForm from '../dynamic-form/dynamic-form';
 
 interface SurveySectionProps {
   section: any;
@@ -18,19 +19,23 @@ const SurveySection = ({ section, formValues, control, errors, form }: SurveySec
     }
   }
 
+  if (section.expand) {
+    return (
+      <div className={styles['step-wrapper-inner']}>
+        {section.title && section.title !== 'default' && (
+          <h4 className={styles['step-title']}>{section.title}</h4>
+        )}
+        <DynamicForm form={form} field={section} />
+      </div>
+    );
+  }
   return (
     <div className={styles['step-wrapper-inner']}>
       {section.title && section.title !== 'default' && (
         <h4 className={styles['step-title']}>{section.title}</h4>
       )}
       {section.fields.map((field: any) => (
-        <SurveyField
-          key={field.slug}
-          field={field}
-          control={control}
-          errors={errors}
-          form={form}
-        />
+        <SurveyField key={field.slug} field={field} control={control} errors={errors} form={form} />
       ))}
     </div>
   );

@@ -126,3 +126,9 @@ export interface InputTableColumnInterface<T extends Record<string, any>> {
   render?: (column: InputTableColumnInterface<T>, item: TableCellData) => React.ReactNode;
   sorting?: boolean;
 }
+
+
+export interface SurveyFormItem {
+  slug: string;
+  value: string;
+}

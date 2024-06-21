@@ -13,7 +13,7 @@ import { useEffect, useState } from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 import styles from './survey.module.scss';
-import { flattenFields } from '@/core/utils/form-utils';
+import { convertFormValuesToArray, flattenFields } from '@/core/utils/form-utils';
 
 interface SurveyProps {
   onFinish: () => void;
@@ -65,7 +65,8 @@ const Survey = ({ onFinish }: SurveyProps) => {
   };
 
   const onSubmit = () => {
-    console.log('form.getValues()', form.getValues());
+    const requestData = convertFormValuesToArray(form.getValues());
+    console.log('requestData', requestData)
     onFinish();
   };
 
