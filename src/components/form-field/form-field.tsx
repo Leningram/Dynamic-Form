@@ -62,7 +62,10 @@ const FormField = ({ field, control, error, form }: FieldProps) => {
   const formValues = form.watch();
   if (field.dependent) {
     const dependentSlug = field.dependent;
-    if (formValues[dependentSlug] === true || formValues[dependentSlug] === 'true') {
+    if (
+      formValues[dependentSlug] === true ||
+      field.dependentValue && formValues[dependentSlug] === field.dependentValue
+    ) {
       return (
         'type' in field && (
           <Controller

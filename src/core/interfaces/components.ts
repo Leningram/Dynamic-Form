@@ -2,6 +2,7 @@ export interface FormItem {
   title: string;
   slug?: string;
   dependent?: string | null;
+  dependentValue?: string | null;
   fields: (Field | FormItem | TableField)[];
   expand?: boolean;
 }
@@ -24,6 +25,7 @@ export interface Field {
   code: any;
   expand?: boolean;
   dependent: string | null;
+  dependentValue?: string | null;
   description: string | null;
   label: string;
   required: boolean;

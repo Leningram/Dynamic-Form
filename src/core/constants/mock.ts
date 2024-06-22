@@ -49,7 +49,7 @@ export const surveyMock: SurveyStep[] = [
             label: 'Salutation',
             type: FieldTypeEnum.Select,
             code: null,
-            acceptableFieldValues: [],
+            acceptableFieldValues: [{ value: 'Mr.' }, { value: 'Mrs.' }, {value: 'Yours'}],
             description: null,
             required: true,
             condition: null,
@@ -58,14 +58,15 @@ export const surveyMock: SurveyStep[] = [
             value: null,
           },
           {
-            label: 'Организационно-правовая форма',
+            label: 'Enter your salutation',
             type: FieldTypeEnum.Text,
             code: null,
             acceptableFieldValues: [],
             description: null,
             required: true,
             condition: null,
-            dependent: null,
+            dependent: 'salutation',
+            dependentValue: 'Yours',
             slug: 'org_legal_form',
             value: null,
           },
@@ -169,7 +170,7 @@ export const surveyMock: SurveyStep[] = [
           {
             label:
               'Сведения о присутствии юридического лица и его постоянно действующих органов управления по адресу его местонахождения',
-           type: FieldTypeEnum.Select,
+            type: FieldTypeEnum.Select,
             code: null,
             acceptableFieldValues: [
               {
@@ -269,7 +270,7 @@ export const surveyMock: SurveyStep[] = [
           },
           {
             label: 'Субъект МСП',
-           type: FieldTypeEnum.Checkbox,
+            type: FieldTypeEnum.Checkbox,
             code: null,
             acceptableFieldValues: [],
             description: null,
@@ -293,7 +294,7 @@ export const surveyMock: SurveyStep[] = [
           },
           {
             label: 'Является ли Клиент частью Группы/Холдинга',
-           type: FieldTypeEnum.Checkbox,
+            type: FieldTypeEnum.Checkbox,
             code: null,
             acceptableFieldValues: [],
             description: null,
@@ -318,7 +319,7 @@ export const surveyMock: SurveyStep[] = [
           {
             label:
               'Участие клиента в других организациях или совместная деятельность с другими организациями',
-           type: FieldTypeEnum.Checkbox,
+            type: FieldTypeEnum.Checkbox,
             code: null,
             acceptableFieldValues: [],
             description: null,
@@ -479,7 +480,7 @@ export const surveyMock: SurveyStep[] = [
         fields: [
           {
             label: 'Тип собственности',
-           type: FieldTypeEnum.Select,
+            type: FieldTypeEnum.Select,
             code: null,
             acceptableFieldValues: [
               {
@@ -507,7 +508,7 @@ export const surveyMock: SurveyStep[] = [
         fields: [
           {
             label: 'Цель бизнеса',
-           type: FieldTypeEnum.Select,
+            type: FieldTypeEnum.Select,
             code: null,
             acceptableFieldValues: [
               {
@@ -624,7 +625,7 @@ export const surveyMock: SurveyStep[] = [
           {
             label:
               'Информация об источниках происхождения денежных средств и (или) иного имущества',
-           type: FieldTypeEnum.Select,
+            type: FieldTypeEnum.Select,
             code: null,
             acceptableFieldValues: [
               {

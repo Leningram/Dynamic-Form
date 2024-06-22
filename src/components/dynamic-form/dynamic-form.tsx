@@ -4,6 +4,7 @@ import Input from '../input/input';
 import { Field } from '@/core/interfaces';
 import Button, { ButtonTypes } from '../button/button';
 import styles from './dynamic-form.module.scss';
+import FormField from '../form-field/form-field';
 
 //TODO типизировать
 const DynamicForm = ({ form, field }: any) => {
@@ -25,11 +26,7 @@ const DynamicForm = ({ form, field }: any) => {
                     control={control}
                     render={() => {
                       return (
-                        <Input
-                          label={item.label}
-                          id={`${field.title}.${index}.${item.slug}`}
-                          {...register(`${field.title}.${index}.${item.slug}`)}
-                        />
+                        <FormField field={item} control={control} form={form} />
                       );
                     }}
                   />
